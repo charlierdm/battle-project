@@ -18,3 +18,11 @@ end
       expect(page).to have_content 'Pete vs Adam: 100HP'
     end
 end
+
+feature 'Attacking' do
+  scenario 'attack Player 2' do
+    sign_in_and_play
+    click_button 'Attack!'
+    expect(page).to have_content 'Pete attacked Adam'
+  end
+end

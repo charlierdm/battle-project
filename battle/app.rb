@@ -21,5 +21,12 @@ class Battle < Sinatra::Base
     erb :players
   end
 
+  get '/attack' do
+    @player1 = session[:player1]
+    @player2 = session[:player2]
+    erb :attack
+  end
+
+
   run! if app_file == $0
 end
