@@ -34,3 +34,5 @@ feature 'Reducing heal' do
     expect(page).to have_content '90 HP'
   end
 end
+
+#git-test
