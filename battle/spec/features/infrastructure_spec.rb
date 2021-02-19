@@ -26,3 +26,11 @@ feature 'Attacking' do
     expect(page).to have_content 'Pete attacked Adam'
   end
 end
+
+feature 'Reducing heal' do
+  scenario 'attack Player 2' do
+    sign_in_and_play
+    click_button 'Attack!'
+    expect(page).to have_content '90 HP'
+  end
+end
